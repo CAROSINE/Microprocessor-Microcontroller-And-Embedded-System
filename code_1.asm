@@ -14,7 +14,7 @@ main proc
     int 21h
     
     
-    add al,bl
+    add al,bl 
     mov ah,0  ;ah srtored 0 for clear register
     aaa
     
