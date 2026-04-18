@@ -18,7 +18,7 @@ main proc
        int 21h                   
        
        
-       printn
+       printn 
        print 'Summation is: '
        add bl,al
        
