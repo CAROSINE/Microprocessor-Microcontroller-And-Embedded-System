@@ -9,7 +9,7 @@
       
       mov ah,1
       int 21h
-      mov bh,al
+      mov bh,al 
       
       
       mov ah,2
