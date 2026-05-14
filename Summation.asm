@@ -9,7 +9,7 @@ main proc
        mov ah,1
        int 21h
        mov bl,al
-       sub bl,
+       sub bl, 48
        
        
        printn                        
