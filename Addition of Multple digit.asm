@@ -1,66 +1,62 @@
 include 'emu8086.inc'
 .model small
 .stack 100h
-
- 
 main proc
     
-    print 'Enter Marks(2 Digit):'
-    mov ah,1
+print 'First Number:'
+mov ah,1
+int 21h
+mov bl,al
+
+
+printn
+print 'Second Number:'
+mov ah,1
+int 21h 
+
+
+add al,bl
+mov ah,0
+aaa
+
+add al,48
+add ah,48
+
+mov bx,ax
+
+printn
+print 'Sum is:'
+mov ah,2
+mov dl,bh
+int 21h
+
+mov ah,2
+mov dl,bl
+int 21h
+
+    exit:
+    mov ah,4ch
     int 21h
-    sub al,48
-    mov cl,al
+    main endp
+end main
+    add ah,48
     
-    
-    mov ah,1
-    int 21h
-    sub al,48
-    mov ch,al
-    
-    
-    
-    mov al,cl
-    mov bl,10
-    mul bl
-    add al,ch
-    mov bx,ax
+    mov bx,ax ;storing value of ax to bx
     
     printn
+    print 'Result is:'
     
-    cmp bx,90
-    jge IF1
+    mov ah,2
+    mov dl,bh
+    int 21h
     
-    cmp bx,80
-    jge IF2
+    mov ah,2
+    mov dl,bl
+    int 21h
     
-    cmp bx,70
-    jge IF3
-    
-    jmp ELSE_PART
-    
-    
-    
-    IF1:
-    print 'A+'
-    jmp exit
-    
-    IF2:
-    print 'A'
-    jmp exit
-    
-    IF3:
-    print 'B'
-    jmp exit
-    
-    ELSE_PART:
-    print 'C'
-      
-      
-      exit:
-    
-      mov ah, 4ch
-      int 21h
-            
-      
-main endp
+    exit:
+    mov ah,4ch
+    int 21h
+    main endp
+end mainain endp
 end main
