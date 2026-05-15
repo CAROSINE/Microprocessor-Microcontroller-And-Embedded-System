@@ -4,7 +4,7 @@ include 'emu8086.inc'
 
 
 main proc
-    
+     
     print 'First Number:'
     mov ah,1
     int 21h
