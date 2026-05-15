@@ -2,7 +2,7 @@ include 'emu8086.inc'
 .model small
 .stack 100h
 
-
+ 
 main proc
     
     print 'Enter Marks(2 Digit):'
