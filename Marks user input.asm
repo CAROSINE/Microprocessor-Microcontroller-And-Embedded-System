@@ -3,7 +3,7 @@ include 'emu8086.inc'
 .stack 100h
 
 
-main proc
+main proc 
     
     print 'Enter Marks(2 Digit):'
     mov ah,1
